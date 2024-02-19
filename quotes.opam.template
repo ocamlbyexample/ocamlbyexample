@@ -1,7 +1,11 @@
 pin-depends: [
+  ["config.0.0.1" "git+https://github.com/ocaml-sys/config.ml"]
+  ["libc.0.0.1" "git+https://github.com/ocaml-sys/libc.ml"]
+  ["rio.0.0.8" "git+https://github.com/riot-ml/riot"]
+  ["bytestring.0.0.8" "git+https://github.com/riot-ml/riot"]
+  ["gluon.0.0.8" "git+https://github.com/riot-ml/riot"]
+  ["riot.0.0.8" "git+https://github.com/riot-ml/riot"]
   ["atacama.0.0.5" "git+https://github.com/leostera/atacama"]
   ["trail.0.0.1" "git+https://github.com/leostera/trail"]
   ["nomad.0.0.1" "git+https://github.com/leostera/nomad"]
-  ["riot.0.0.8" "git+https://github.com/riot-ml/riot"]
-  ["bytestring.0.0.8" "git+https://github.com/riot-ml/riot"]
 ]
