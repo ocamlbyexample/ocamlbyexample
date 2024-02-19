@@ -1,0 +1,7 @@
+pin-depends: [
+  ["atacama.0.0.5" "git+https://github.com/leostera/atacama"]
+  ["trail.0.0.1" "git+https://github.com/leostera/trail"]
+  ["nomad.0.0.1" "git+https://github.com/leostera/nomad"]
+  ["riot.0.0.8" "git+https://github.com/riot-ml/riot"]
+  ["bytestring.0.0.8" "git+https://github.com/riot-ml/riot"]
+]
