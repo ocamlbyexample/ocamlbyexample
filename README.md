@@ -16,3 +16,7 @@ This to sites different in 2 ways:
 ### Inspiration sources
 - https://tour.gleam.run/basics/hello-world/
 - https://gobyexample.com/
+
+### Funding
+I added the ability to fund this project and currently we only help funding girlswhocode.
+If the costs for servers raise will I add a funding for ocamlbyexample as well and the idea is that the funding for ocamlbyexample will be for covering costs of servers. If I gain more money then I need to pay for the servers will I donate this money to a organization that help people
