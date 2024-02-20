@@ -1,0 +1,8 @@
+open Sidewinder.Html
+
+let root ~content () =
+  <html>
+    <body>
+    (content)
+    </body>
+  </html>

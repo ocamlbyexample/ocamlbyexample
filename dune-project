@@ -1,11 +1,11 @@
 (lang dune 3.12)
 
-(name quotes)
+(name ocamlbyexample)
 
 (generate_opam_files true)
 
 (source
- (github dbcaml/quotes_website))
+ (github ocamlbyexample/ocamlbyexample))
 
 (authors "Emil Priver")
 
@@ -13,14 +13,28 @@
 
 (license MIT)
 
-(documentation https://github.com/dbcaml/quotes)
+(documentation https://github.com/ocamlbyexample/ocamlbyexample)
 
 (package
- (name quotes)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (name ocamlbyexample)
+ (synopsis "Ocaml by example website")
+ (description "Ocaml by example website")
  (depends ocaml dune)
- (tags
-  (topics "to describe" your project)))
+)
+
+(dialect
+ (name mlx)
+ (implementation
+  (extension mlx)
+  (preprocess
+   (with-stdin-from
+    %{input-file}
+    (run mlx))))
+ (interface
+  (extension mlxi)
+  (preprocess
+   (with-stdin-from
+    %{input-file}
+    (run mlx)))))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

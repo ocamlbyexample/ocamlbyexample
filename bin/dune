@@ -1,6 +1,6 @@
 (executables
  (names main)
- (public_names quotes)
+ (public_names ocamlbyexample)
  (preprocess
-  (pps bytestring.ppx))
- (libraries trail nomad))
+  (pps bytestring.ppx serde_derive))
+ (libraries trail nomad sidewinder serde serde_json))

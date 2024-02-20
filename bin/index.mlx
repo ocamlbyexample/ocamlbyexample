@@ -1,0 +1,14 @@
+open Sidewinder.Html
+include Sidewinder.Default
+
+type state = int
+
+type action = 0
+
+let mount _conn = 0
+
+let handle_action _ _ = 
+  ()
+
+let render ~state:() () =
+  <span> (string "hello world") </span>

@@ -11,13 +11,7 @@ let endpoint =
     use (module Logger) Logger.(args ~level:Debug ());
     router
       [
-        socket "/ws" (module Websocket.Handler) ();
-        get "/" (fun conn -> Conn.send_response `OK {%b|"hello world"|} conn);
-        scope "/api"
-          [
-            get "/version" (fun conn ->
-                Conn.send_response `OK {%b|"none"|} conn);
-          ];
+         get "/" Sidewinder_trail.(live Layout.root (module Index));
       ];
   ]
 
