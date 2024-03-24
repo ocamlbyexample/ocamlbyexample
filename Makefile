@@ -33,11 +33,7 @@ tailwind-build:
 
 .PHONY: ci-build
 ci-build:
-	cd playground 
 	make deps
-	make build 
-	cd ..
+	make build
 	cp -r playground/assets dist/playground
 	npm run tailwind
-	dune build 
-	dune exec ocamlbyexample
