@@ -1,0 +1,21 @@
+{
+  "name": "ocamlbyexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "tailwindcss build -o ./dist/css/index.css -c tailwind.config.js -i ./css/main.css",
+    "build-files": "dune build && dune exec ocamlbyexample",
+    "dev": "concurrently 'make tailwind-dev' 'ws -d dist'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "concurrently": "^8.2.2",
+    "tailwindcss": "^3.4.1",
+    "nodemon": "^3.1.0",
+    "ws": "^8.16.0"
+  }
+}

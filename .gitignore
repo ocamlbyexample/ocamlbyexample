@@ -22,4 +22,6 @@ setup.log
 
 *.install
 
+node_modules/
+
 _opam/

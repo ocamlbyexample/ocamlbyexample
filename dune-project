@@ -5,11 +5,11 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github ocamlbyexample/ocamlbyexample))
 
-(authors "Author Name")
+(authors "Emil Privér")
 
-(maintainers "Maintainer Name")
+(maintainers "Emil Privér")
 
 (license LICENSE)
 
@@ -17,10 +17,6 @@
 
 (package
  (name ocamlbyexample)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
- (tags
-  (topics "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
+ (synopsis "Ocaml by example")
+ (description "ocamlbyexample is a collection of examples of OCaml code.")
+ (depends ocaml dune))

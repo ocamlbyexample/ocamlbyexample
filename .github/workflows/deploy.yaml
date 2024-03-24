@@ -37,17 +37,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-      - name: Install Playground deps
-        run: |
-          cd playground
-          opam install . --deps-only
-          cd ..
-      - name: Install deps
-        run: opam install . --deps-only
       - name: Build
-        run: make build
-      - name: Copy playground files
-        run: cp -r ./playground/asset ./dist/playground
+        run: make ci-build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

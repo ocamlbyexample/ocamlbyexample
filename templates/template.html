@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>OCaml by example | {{title}} </title>
+    <script id="playground-script" data-merlin-url="playground/merlin.min.js" data-worker-url="playground/worker.min.js" data-default-code='{{code}}' src="playground/playground.min.js" defer=""></script>
+    <link rel="preload stylesheet" as="style" href="/css/index.css" /> 
+    <script defer src="https://stats.priver.dev/script.js" data-website-id="2a261a39-1cbf-4af6-b62c-493a52b39463"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="h-full flex flex-wrap"> 
+        <div class="px-2 w-full text-center h-[50px] place-content-center">
+        <h1>Ocaml by example | {{title}} </h1>
+      </div>
+      <div class="w-full grid grid-cols-2 h-full">
+        <div class="prose lg:prose-xl px-2 text-white">
+          {{content}}
+        </div>
+        <div class="grid grid-rows-2 relative">
+          <div>
+            <div id="editor1" style=""></div>
+            <button style="display:none" id="share">Share</button>
+            <button class="run-button" id="run">Run</button>
+          </div>
+          <div id="output" class="p-4"> </div>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
