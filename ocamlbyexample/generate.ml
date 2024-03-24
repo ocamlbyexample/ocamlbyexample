@@ -4,13 +4,16 @@ let template : ('a -> 'b -> 'c, unit, string) format =
       <head>
         <title>OCaml</title>
         <script id="playground-script" data-merlin-url="playground/merlin.min.js" data-worker-url="playground/worker.min.js" data-default-code="%s" src="playground/playground.min.js" defer=""></script>
+        <style>
+           
+        </style>
       </head>
       <body>
       <div> 
         %s
         <div style="">
           <div id="editor1" style=""></div>
-          <button id="share">Share</button>
+          <button style="display:none" id="share">Share</button>
           <button id="run">Run</button>
         </div>
         <div id="output"> </div>
