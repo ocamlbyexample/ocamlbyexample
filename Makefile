@@ -33,7 +33,6 @@ tailwind-build:
 
 .PHONY: ci-build
 ci-build:
-	make deps
 	make build
 	cp -r playground/assets dist/playground
 	npm run tailwind
