@@ -3,7 +3,7 @@ let template : ('a -> 'b -> 'c, unit, string) format =
     <html>
       <head>
         <title>OCaml</title>
-        <script id="playground-script" data-merlin-url="https://ocaml.org/play/_/v5RDYx588Q6Ng7p8mWrKyg/merlin.min.js" data-worker-url="https://ocaml.org/play/_/ES_yhQR43HdaKIkjQbSeuA/worker.min.js" data-default-code="%s" src="https://ocaml.org/play/_/C3DqQnnnTkxnGUaY8cyREQ/playground.min.js" defer=""></script>
+        <script id="playground-script" data-merlin-url="playground/merlin.min.js" data-worker-url="playground/worker.min.js" data-default-code="%s" src="playground/playground.min.js" defer=""></script>
       </head>
       <body>
       <div> 
