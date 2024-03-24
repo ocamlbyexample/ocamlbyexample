@@ -39,6 +39,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: install dune
         run: opam install dune
+      - name: Install packages
+        run: npm install
       - name: Build
         run: make ci-build
       - name: Upload artifact
