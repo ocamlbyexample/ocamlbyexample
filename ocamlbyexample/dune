@@ -1,0 +1,4 @@
+(executable
+ (public_name ocamlbyexample)
+ (name main)
+ (libraries str))

@@ -1,0 +1,47 @@
+(lang dune 3.0)
+
+(using directory-targets 0.1)
+
+(name ocamlorg-playground)
+
+(documentation "https://ocaml.github.io/ocaml.org/")
+
+(source
+ (github ocaml/ocaml.org))
+
+(license ISC)
+
+(authors
+ "Thibaut Mattio"
+ "Lucas Pluvinage"
+ "Patrick Ferris"
+ "Ashish Agarwal"
+ "Kanishka Azimi"
+ "Richard Davison"
+ "Jiae Kam")
+
+(maintainers "Thibaut Mattio" "Patrick Ferris")
+
+(generate_opam_files true)
+
+(using mdx 0.1)
+
+(package
+ (name ocamlorg-playground)
+ (synopsis "Playground for the official OCaml website")
+ (description
+  "This repository contains the playground served on https://ocaml.org/play.")
+ (allow_empty)
+ (depends
+  (ocaml
+   (>= 5.0.0))
+  (brr
+   (>= 0.0.6))
+  esbuild
+  (js_of_ocaml
+   (>= 5.0))
+  js-top-worker
+  code-mirror
+  merlin-js
+  rpclib
+  rpclib-lwt))
