@@ -25,3 +25,5 @@ setup.log
 node_modules/
 
 _opam/
+
+playground/asset

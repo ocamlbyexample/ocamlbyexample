@@ -30,10 +30,10 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Install OCaml
-        run: |
-          bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
-          opam init
+      - name: Set-up OCaml 5.1
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: "5.1"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -43,14 +43,7 @@ jobs:
       - name: Install packages
         run: npm install
       - name: Build
-        run: | 
-          rm -r _opam
-          opam switch create . 5.1.0 --no-install
-          opam install . --deps-only -y
-          eval $(opam env)
-          opam exec -- dune build --root .
-          dune exec ocamlbyexample
-          npm run build
+        run: bash build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

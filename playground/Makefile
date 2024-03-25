@@ -11,10 +11,6 @@ deps: create_switch ## Install development dependencies
 .PHONY: switch
 switch: deps ## Create an opam switch and install development dependencies
 
-.PHONY: build-files
-build-files:
-	opam exec -- dune exec ocamlbyexample
-
 .PHONY: build
 build:
 	opam exec -- dune build --root .
@@ -23,10 +19,7 @@ build:
 fmt: ## Format the codebase with ocamlformat
 	opam exec -- dune build --root . --auto-promote @fmt
 
-.PHONY: tailwind
-tailwind-dev:
-	npx tailwindcss build -m -w -o ./dist/css/index.css -c tailwind.config.js -i ./css/main.css
+ci-build: deps
+	eval $(opam env)
+	make build
 
-.PHONY: tailwind-build
-tailwind-build: 
-	npx tailwindcss build -o ./dist/css/index.css -c tailwind.config.js -i ./css/main.css
