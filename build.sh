@@ -7,6 +7,7 @@ cd ..
 opam switch create . 5.1.0 --no-install
 opam install . --deps-only -y
 opam exec -- dune build --root .
+opam exec -- dune exec ocamlbyexample
 eval $(opam env)
 npm install
 cp -r playground/assets dist/playground
