@@ -37,4 +37,4 @@ let make file_name description code =
     |> Str.global_replace (Str.regexp "{{code}}") (String.trim code)
   in
 
-  write_to_file (Printf.sprintf "dist/%s.html" file_name) content
+  write_to_file (Printf.sprintf "dist/%s/index.html" file_name) content
