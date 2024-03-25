@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tailwind": "tailwindcss build -o ./dist/css/index.css -c tailwind.config.js -i ./css/main.css",
+    "tailwind-prod": "tailwindcss build -m -o ./dist/css/index.css -c tailwind.config.js -i ./css/main.css",
     "build-files": "dune build && dune exec ocamlbyexample",
     "dev": "concurrently 'make tailwind-dev' 'ws -d dist'"
   },
