@@ -30,7 +30,7 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Set-up OCaml 5.0
+      - name: Set-up OCaml 5.1
         uses: ocaml/setup-ocaml@v2
         with:
           ocaml-compiler: "5.1"
