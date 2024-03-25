@@ -40,13 +40,12 @@ jobs:
       - name: install dune
         run: |
           opam install dune
-          eval $(opam env)
       - name: Install packages
         run: npm install
       - name: Build
         run: | 
-          dune build --root .
-          dune exec ocamlbyexample
+          opam exec -- dune build --root .
+          opam exec -- dune exec ocamlbyexample
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

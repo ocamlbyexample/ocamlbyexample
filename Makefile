@@ -1,4 +1,4 @@
-COMPILER=5.0.0
+COMPILER=5.1.0
 
 .PHONY: create_switch
 create_switch: ## Create switch
