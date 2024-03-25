@@ -45,6 +45,7 @@ jobs:
       - name: Build
         run: | 
           opam install . --deps-only -y
+          eval $(opam env)
           opam exec -- dune build --root .
           opam exec -- dune exec ocamlbyexample
           npm run build
