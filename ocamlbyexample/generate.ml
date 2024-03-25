@@ -1,3 +1,6 @@
+open Sys
+open Unix
+
 let read_lines_from_file filename =
   let ic = open_in filename in
   let rec loop acc =
@@ -16,7 +19,17 @@ let read_lines_from_file filename =
     close_in_noerr ic;
     raise e
 
+let rec mkdir_p dir =
+  if not (file_exists dir) then begin
+    mkdir_p (Filename.dirname dir);
+    try mkdir dir 0o755 with
+    | Unix_error (EEXIST, _, _) -> () (* Ignore if directory already exists *)
+  end
+
 let write_to_file filename text =
+  let path = Filename.dirname filename in
+  mkdir_p path;
+  (* Ensure that the directory path exists *)
   let oc = open_out filename in
   try
     output_string oc text;
