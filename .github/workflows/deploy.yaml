@@ -48,7 +48,7 @@ jobs:
           opam switch create . 5.1.0 --no-install
           opam install . --deps-only -y
           eval $(opam env)
-          dune build --root .
+          opam exec -- dune build --root .
           dune exec ocamlbyexample
           npm run build
       - name: Upload artifact
