@@ -46,8 +46,8 @@ jobs:
         run: | 
           opam install . --deps-only -y
           eval $(opam env)
-          opam exec -- dune build --root .
-          opam exec -- dune exec ocamlbyexample
+          dune build --root .
+          dune exec ocamlbyexample
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
