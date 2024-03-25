@@ -10,5 +10,5 @@ opam exec -- dune build --root .
 eval $(opam env)
 opam exec -- dune exec ocamlbyexample
 npm install
-cp -r playground/assets dist/playground
+cp -r playground/asset dist/playground
 npm run tailwind-prod
